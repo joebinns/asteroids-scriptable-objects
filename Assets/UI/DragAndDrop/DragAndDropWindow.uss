@@ -5,17 +5,14 @@
 }
 
 .slot {
-    background-color: rgb(255, 255, 255);
     width: 80px;
     height: 80px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    margin: 5px;
+    border-top-radius: 10px;
+}
+
+.available {
+    background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/EmptySlot.png?fileID=21300000&guid=5ced8eef2f6c50d40bc9ff8b1153be1e&type=3#EmptySlot');
 }
 
 .row {

@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/ShipBuilder.uss?fileID=7433441132597879392&amp;guid=55723ff6c738eb94e9fa1712d4ccd2c6&amp;type=3#ShipBuilder" />
-    <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
-        <ui:Label tabindex="-1" text="Hello" display-tooltip-when-elided="true" />
-        <ui:Button text="Next" display-tooltip-when-elided="true" style="height: 174px; width: 298px; position: relative; white-space: normal; -unity-text-align: upper-left;" />
-    </ui:VisualElement>
-</ui:UXML>

@@ -4,10 +4,37 @@
         <ui:VisualElement name="slot_row1" class="row">
             <ui:VisualElement name="slot1" class="slot" />
             <ui:VisualElement name="slot2" class="slot" />
+            <ui:VisualElement name="slot3" class="slot" />
+            <ui:VisualElement name="slot4" class="slot" />
+            <ui:VisualElement name="slot5" class="slot" />
         </ui:VisualElement>
         <ui:VisualElement name="slot_row2" class="row">
             <ui:VisualElement name="slot1" class="slot" />
             <ui:VisualElement name="slot2" class="slot" />
+            <ui:VisualElement name="slot3" class="slot" />
+            <ui:VisualElement name="slot4" class="slot" />
+            <ui:VisualElement name="slot5" class="slot" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_row3" class="row">
+            <ui:VisualElement name="slot1" class="slot" />
+            <ui:VisualElement name="slot2" class="slot" />
+            <ui:VisualElement name="slot3" class="slot available" />
+            <ui:VisualElement name="slot4" class="slot" />
+            <ui:VisualElement name="slot5" class="slot" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_row4" class="row">
+            <ui:VisualElement name="slot1" class="slot" />
+            <ui:VisualElement name="slot2" class="slot" />
+            <ui:VisualElement name="slot3" class="slot" />
+            <ui:VisualElement name="slot4" class="slot" />
+            <ui:VisualElement name="slot5" class="slot" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot_row5" class="row">
+            <ui:VisualElement name="slot1" class="slot" />
+            <ui:VisualElement name="slot2" class="slot" />
+            <ui:VisualElement name="slot3" class="slot" />
+            <ui:VisualElement name="slot4" class="slot" />
+            <ui:VisualElement name="slot5" class="slot" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="object" class="object" />
