@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -59,20 +60,78 @@ public class DragAndDropManipulator : PointerManipulator
         if (enabled && target.HasPointerCapture(evt.pointerId))
         {
             target.ReleasePointer(evt.pointerId);
+
+
+            var closestOverlappingSlot = FindClosestSlot();
+            if (root.Query(className: "available").ToList().Contains(closestOverlappingSlot))
+            {
+                var directions = new List<Vector2Int>
+                {
+                    Vector2Int.up,
+                    Vector2Int.right,
+                    Vector2Int.down,
+                    Vector2Int.left
+                };
+                var unitGridCoordinate = FindUnitGridCoordinates(new List<VisualElement> { closestOverlappingSlot })[0];
+                var neighbourUnitGridCoordinates = directions.Select(direction => unitGridCoordinate + direction).ToList();
+                var neighbourVisualElements = FindVisualElements(neighbourUnitGridCoordinates);
+                foreach (var neighbour in neighbourVisualElements)
+                {
+                    neighbour.AddToClassList("available");
+                }
+            }
         }
+    }
+    
+    private List<Vector2Int> FindUnitGridCoordinates(List<VisualElement> slots)
+    {
+        var unitGridCoordinates = new List<Vector2Int>();
+        // Identify grid coordinates of elements
+        const int WIDTH = 5;
+        var x = 0;
+        var y = 0;
+        foreach (var visualElement in root.Query(className: "slot").ToList()) {
+            // Check if the current element is at a grid coordinate of interest
+            var unitGridCoordinate = new Vector2Int(x, y);
+            if (slots.Contains(visualElement))
+            {
+                unitGridCoordinates.Add(unitGridCoordinate);
+            }
+            // Sweep by rows then columns
+            if (x == WIDTH - 1) y++;
+            x++;
+            x %= WIDTH;
+        }
+        return unitGridCoordinates;
+    }
+    
+    private List<VisualElement> FindVisualElements(List<Vector2Int> unitGridCoordinates)
+    {
+        var visualElements = new List<VisualElement>();
+        // Identify grid coordinates of elements
+        const int WIDTH = 5;
+        var x = 0;
+        var y = 0;
+        foreach (var visualElement in root.Query(className: "slot").ToList()) {
+            // Check if the current element is at a grid coordinate of interest
+            var unitGridCoordinate = new Vector2Int(x, y);
+            if (unitGridCoordinates.Contains(unitGridCoordinate))
+            {
+                visualElements.Add(visualElement);
+            }
+            // Sweep by rows then columns
+            if (x == WIDTH - 1) y++;
+            x++;
+            x %= WIDTH;
+        }
+        return visualElements;
     }
 
     private void PointerCaptureOutHandler(PointerCaptureOutEvent evt)
     {
         if (enabled)
         {
-            VisualElement slotsContainer = root.Q<VisualElement>("slots");
-            UQueryBuilder<VisualElement> allSlots =
-                slotsContainer.Query<VisualElement>(className: "slot");
-            UQueryBuilder<VisualElement> overlappingSlots =
-                allSlots.Where(OverlapsTarget);
-            VisualElement closestOverlappingSlot =
-                FindClosestSlot(overlappingSlots);
+            var closestOverlappingSlot = FindClosestSlot();
             Vector3 closestPos = Vector3.zero;
             if (closestOverlappingSlot != null)
             {
@@ -88,6 +147,15 @@ public class DragAndDropManipulator : PointerManipulator
         }
     }
 
+    private VisualElement FindClosestSlot()
+    {
+        VisualElement slotsContainer = root.Q<VisualElement>("slots");
+        UQueryBuilder<VisualElement> allSlots = slotsContainer.Query<VisualElement>(className: "slot");
+        UQueryBuilder<VisualElement> overlappingSlots = allSlots.Where(OverlapsTarget);
+        VisualElement closestOverlappingSlot = FindClosestSlot(overlappingSlots);
+        return closestOverlappingSlot;
+    }
+    
     private bool OverlapsTarget(VisualElement slot)
     {
         return target.worldBound.Overlaps(slot.worldBound);
