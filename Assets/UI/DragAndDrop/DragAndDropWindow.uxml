@@ -39,9 +39,14 @@
     </ui:VisualElement>
     <ui:VisualElement name="sidebar" class="sidebar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
         <ui:VisualElement name="row" class="row" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
-            <ui:VisualElement name="icon" class="object" style="left: 0; top: 0; width: 25px; height: 25px; position: relative; background-image: url(&apos;project://database/Assets/UI/DragAndDrop/Sprites/Hull.png?fileID=21300000&amp;guid=bea44396c437d7742ae2fa512f9c57e5&amp;type=3#Hull&apos;);" />
-            <ui:VisualElement name="object" class="icon" />
+            <ui:VisualElement name="icon" class="icon hull" />
+            <ui:VisualElement name="object" class="icon hull object" />
             <ui:Label tabindex="-1" text="Hull" display-tooltip-when-elided="true" name="name" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-text-align: middle-left; color: rgb(255, 255, 255);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="row" class="row" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;">
+            <ui:VisualElement name="icon" class="icon thruster" />
+            <ui:VisualElement name="object" class="icon thruster object" />
+            <ui:Label tabindex="-1" text="Thruster" display-tooltip-when-elided="true" name="name" style="padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; -unity-text-align: middle-left; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

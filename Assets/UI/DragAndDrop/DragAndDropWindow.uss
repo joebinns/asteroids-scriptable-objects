@@ -37,12 +37,15 @@
     background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/Hull.png?fileID=21300000&guid=bea44396c437d7742ae2fa512f9c57e5&type=3#Hull');
 }
 
+.thruster {
+    background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/Thruster.png?fileID=21300000&guid=c8bc3634af4ac574f94f89e79c78927c&type=3#Thruster');
+}
+
 .icon {
-    left: 4px;
-    top: 4px;
     width: 25px;
     height: 25px;
+}
+
+.object {
     position: absolute;
-    background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/Hull.png?fileID=21300000&guid=bea44396c437d7742ae2fa512f9c57e5&type=3#Hull');
-    -unity-background-image-tint-color: rgba(255, 255, 255, 0.5);
 }

@@ -159,7 +159,6 @@ public class DragAndDropManipulator : PointerManipulator
 
     private VisualElement FindClosestSlot()
     {
-        Debug.Log(root);
         VisualElement slotsContainer = root.Q<VisualElement>("slots");
         UQueryBuilder<VisualElement> allSlots = slotsContainer.Query<VisualElement>(className: "slot");
         UQueryBuilder<VisualElement> overlappingSlots = allSlots.Where(OverlapsTarget);
