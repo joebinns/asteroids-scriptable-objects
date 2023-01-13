@@ -8,7 +8,7 @@ public class DragAndDropManipulator : PointerManipulator
     public DragAndDropManipulator(VisualElement target)
     {
         this.target = target;
-        root = target.parent.parent;
+        root = target.parent.parent.parent;
     }
 
     protected override void RegisterCallbacksOnTarget()
@@ -83,6 +83,9 @@ public class DragAndDropManipulator : PointerManipulator
                 {
                     neighbour.AddToClassList("available");
                 }
+                
+                //closestOverlappingSlot.RemoveFromClassList("available");
+                closestOverlappingSlot.AddToClassList("hull");
             }
         }
     }
@@ -135,6 +138,7 @@ public class DragAndDropManipulator : PointerManipulator
     {
         if (enabled)
         {
+            /*
             var closestOverlappingSlot = FindClosestSlot();
             Vector3 closestPos = Vector3.zero;
             if (closestOverlappingSlot != null)
@@ -146,6 +150,8 @@ public class DragAndDropManipulator : PointerManipulator
                 closestOverlappingSlot != null ?
                 closestPos :
                 targetStartPosition;
+                */
+            target.transform.position = targetStartPosition;
 
             enabled = false;
         }

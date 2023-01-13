@@ -9,6 +9,10 @@
     height: 80px;
     margin: 5px;
     border-top-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .available {
@@ -20,24 +24,25 @@
     flex-wrap: nowrap;
 }
 
-.object {
-    width: 50px;
-    height: 50px;
-    background-color: rgb(0, 113, 255);
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    position: absolute;
-    left: 18px;
-    top: 18px;
-}
-
 .sidebar {
     position: absolute;
     height: 100%;
-    width: 40%;
+    width: 20%;
     right: 0;
     background-color: rgba(255, 255, 255, 0.25);
     max-height: none;
+}
+
+.hull {
+    background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/Hull.png?fileID=21300000&guid=bea44396c437d7742ae2fa512f9c57e5&type=3#Hull');
+}
+
+.icon {
+    left: 4px;
+    top: 4px;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background-image: url('project://database/Assets/UI/DragAndDrop/Sprites/Hull.png?fileID=21300000&guid=bea44396c437d7742ae2fa512f9c57e5&type=3#Hull');
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.5);
 }
