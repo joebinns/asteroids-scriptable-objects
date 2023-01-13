@@ -37,5 +37,7 @@
             <ui:VisualElement name="slot5" class="slot" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="object" class="object" />
+    <ui:VisualElement name="sidebar" class="sidebar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="object" class="object" />
+    </ui:VisualElement>
 </ui:UXML>

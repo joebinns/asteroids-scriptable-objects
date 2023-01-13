@@ -8,7 +8,7 @@ public class DragAndDropManipulator : PointerManipulator
     public DragAndDropManipulator(VisualElement target)
     {
         this.target = target;
-        root = target.parent;
+        root = target.parent.parent;
     }
 
     protected override void RegisterCallbacksOnTarget()
@@ -48,10 +48,14 @@ public class DragAndDropManipulator : PointerManipulator
         if (enabled && target.HasPointerCapture(evt.pointerId))
         {
             Vector3 pointerDelta = evt.position - pointerStartPosition;
-
+            
+            target.transform.position = new Vector2(targetStartPosition.x + pointerDelta.x,
+                targetStartPosition.y + pointerDelta.y);
+            /*
             target.transform.position = new Vector2(
                 Mathf.Clamp(targetStartPosition.x + pointerDelta.x, 0, target.panel.visualTree.worldBound.width),
                 Mathf.Clamp(targetStartPosition.y + pointerDelta.y, 0, target.panel.visualTree.worldBound.height));
+            */
         }
     }
 
@@ -61,7 +65,7 @@ public class DragAndDropManipulator : PointerManipulator
         {
             target.ReleasePointer(evt.pointerId);
 
-
+            // Add the available class to neighbouring grid spaces
             var closestOverlappingSlot = FindClosestSlot();
             if (root.Query(className: "available").ToList().Contains(closestOverlappingSlot))
             {
@@ -149,6 +153,7 @@ public class DragAndDropManipulator : PointerManipulator
 
     private VisualElement FindClosestSlot()
     {
+        Debug.Log(root);
         VisualElement slotsContainer = root.Q<VisualElement>("slots");
         UQueryBuilder<VisualElement> allSlots = slotsContainer.Query<VisualElement>(className: "slot");
         UQueryBuilder<VisualElement> overlappingSlots = allSlots.Where(OverlapsTarget);
