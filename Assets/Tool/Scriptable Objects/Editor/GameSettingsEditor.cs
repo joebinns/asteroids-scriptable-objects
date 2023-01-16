@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine.UIElements;
 
-
 [CustomEditor(typeof(GameSettings))]
 public class GameSettingsEditor : Editor
 {

@@ -4,7 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - m_ViewDataDictionary: {instanceID: 0}
   - m_VisualTreeAsset: {fileID: 9197481963319205126, guid: b1978a23b5d4b69498aed6d44be1e2c5, type: 3}
+  - _gameSettings: {fileID: 11400000, guid: 7dce6398a37b39846a3732c114e2144d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
