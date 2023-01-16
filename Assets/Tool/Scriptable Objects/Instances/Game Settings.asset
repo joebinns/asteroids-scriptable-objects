@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11bc4b4e991f080469bf2cdf5d0388d2, type: 3}
-  m_Name: Asteroid Spawner Settings
+  m_Script: {fileID: 11500000, guid: 6421b4714d08f914d897b973b1b6d698, type: 3}
+  m_Name: Game Settings
   m_EditorClassIdentifier: 
-  spawnTimeRange: {x: 1, y: 4}
-  amountRange: {x: 1, y: 2}

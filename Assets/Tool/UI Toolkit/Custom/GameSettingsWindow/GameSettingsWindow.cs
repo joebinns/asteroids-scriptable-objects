@@ -2,17 +2,15 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameSettings : EditorWindow
+public class GameSettingsWindow : EditorWindow // TODO: OnEnable, instance the scriptable object
 {
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
 
-    public float m_InitialHealth;
-    
     [MenuItem("Window/UI Toolkit/GameSettings")]
     public static void ShowExample()
     {
-        GameSettings wnd = GetWindow<GameSettings>();
+        GameSettingsWindow wnd = GetWindow<GameSettingsWindow>();
         wnd.titleContent = new GUIContent("GameSettings");
     }
 
@@ -24,10 +22,5 @@ public class GameSettings : EditorWindow
         // Instantiate UXML
         VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
         root.Add(labelFromUXML);
-    }
-    
-    private void OnInspectorUpdate()
-    {
-        Debug.Log(m_InitialHealth);
     }
 }

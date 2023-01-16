@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Foldout text="Asteroid Spawner">
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:Label tabindex="-1" text="Spawn Time Range" display-tooltip-when-elided="true" />
+            <ui:FloatField label="Min" value="42.2" />
+            <ui:FloatField label="Max" value="42.2" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:Label tabindex="-1" text="Amount Range" display-tooltip-when-elided="true" />
+            <ui:IntegerField label="Min" value="42" />
+            <ui:IntegerField label="Max" value="42" />
+        </ui:VisualElement>
+    </ui:Foldout>
+    <ui:Foldout text="Hull">
+        <ui:SliderInt picking-mode="Ignore" label="Initial Health" value="10" high-value="100" low-value="1" show-input-field="true" binding-path="InitialHealth" />
+    </ui:Foldout>
+    <ui:Foldout text="Engine">
+        <ui:Slider picking-mode="Ignore" label="Throttle Power" value="42" high-value="100" />
+        <ui:Slider picking-mode="Ignore" label="Rotation Power" value="42" high-value="100" />
+    </ui:Foldout>
+    <ui:Foldout text="Gun">
+        <ui:Slider picking-mode="Ignore" label="Cooldown" value="42" high-value="100" />
+    </ui:Foldout>
+</ui:UXML>
