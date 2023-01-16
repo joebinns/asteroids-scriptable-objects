@@ -6,7 +6,7 @@ namespace Ship
     public class Gun : MonoBehaviour
     {
         [SerializeField] private Laser _laserPrefab;
-        [SerializeField] private float _cooldown;
+        public float Cooldown;
         private bool _isReadyToFire = true;
 
         private void Update()
@@ -23,7 +23,7 @@ namespace Ship
             _isReadyToFire = false;
             var trans = transform;
             Instantiate(_laserPrefab, trans.position, trans.rotation);
-            yield return new WaitForSeconds(_cooldown);
+            yield return new WaitForSeconds(Cooldown);
             _isReadyToFire = true;
         }
     }

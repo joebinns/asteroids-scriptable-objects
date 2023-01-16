@@ -1,13 +1,11 @@
-using System;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameSettingsWindow : EditorWindow // TODO: OnEnable, instance the scriptable object
+public class GameSettingsWindow : EditorWindow
 {
     [SerializeField] private VisualTreeAsset m_VisualTreeAsset = default;
-
     [SerializeField] private GameSettings _gameSettings;
 
     [MenuItem("Window/UI Toolkit/GameSettings")]
@@ -26,7 +24,7 @@ public class GameSettingsWindow : EditorWindow // TODO: OnEnable, instance the s
     {
         // Each editor window contains a root VisualElement object
         VisualElement root = rootVisualElement;
-        
+
         // Instantiate UXML
         VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
         root.Add(labelFromUXML);

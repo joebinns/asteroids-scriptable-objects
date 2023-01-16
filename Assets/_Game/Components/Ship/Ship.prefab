@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2970632031999273637}
   - component: {fileID: 2970632031999273638}
   - component: {fileID: 2970632031999273633}
-  - component: {fileID: 6578066716522484772}
   - component: {fileID: 2970632031999273632}
   m_Layer: 0
   m_Name: Ship
@@ -30,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2970632032652603878}
   - {fileID: 2970632033307266043}
@@ -49,10 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ca54af3d6ff174994b183b53e8dc92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _throttlePower: {fileID: 11400000, guid: beb4542c9c678f14cb3e3a74aead4314, type: 2}
-  _rotationPower: {fileID: 11400000, guid: eb6f17e4493560c4b9750572ccc4f906, type: 2}
-  _throttlePowerSimple: 0
-  _rotationPowerSimple: 0
+  ThrottlePower: 0
+  RotationPower: 0
 --- !u!114 &2970632031999273633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,18 +69,6 @@ MonoBehaviour:
     _simpleValue: 12
     _useSimple: 0
   _healthObservable: {fileID: 11400000, guid: a29c193f4c943534ab4728aacaf9839a, type: 2}
---- !u!114 &6578066716522484772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2970632031999273636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24a0cd419e68444499cf96316af2fa39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2970632031999273632
 Rigidbody2D:
   serializedVersion: 4
@@ -100,6 +86,12 @@ Rigidbody2D:
   m_AngularDrag: 2
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -132,6 +124,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2970632031999273637}
   m_RootOrder: 0
@@ -147,6 +140,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -197,6 +191,25 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -215,6 +228,7 @@ PolygonCollider2D:
     - - {x: 1.28, y: -1.28}
       - {x: 0, y: 1.28}
       - {x: -1.28, y: -1.28}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2970632033307266042
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +256,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2970632031999273637}
   m_RootOrder: 1
@@ -259,6 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _laserPrefab: {fileID: 5567069101288871488, guid: 2b9ecba75bf344a41ae8623bcd4fdab6, type: 3}
+  _cooldown: 0
 --- !u!1 &3617658530249206207
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +302,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2970632031999273637}
   m_RootOrder: 2
