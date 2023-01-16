@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="slider_float" src="project://database/Assets/Tool/UI%20Toolkit/Custom/GameSettings/Templates/slider_float.uxml?fileID=9197481963319205126&amp;guid=a41219954254c7a4ca2d0e708a067486&amp;type=3#slider_float" />
     <Style src="project://database/Assets/Tool/UI%20Toolkit/Custom/GameSettings/GameSettings.uss?fileID=7433441132597879392&amp;guid=f690d78b5d526f944ab01d88fad77774&amp;type=3#GameSettings" />
     <ui:Foldout text="Asteroid Spawner">
         <ui:MinMaxSlider picking-mode="Ignore" label="Spawn Time" min-value="1" max-value="4" low-limit="0" high-limit="10">
@@ -12,9 +13,7 @@
     </ui:Foldout>
     <ui:Foldout text="Engine" name="engine">
         <ui:Slider picking-mode="Ignore" label="Throttle Power" value="2" high-value="10" binding-path="ThrottlePower" name="throttle-power" />
-        <ui:Slider picking-mode="Ignore" label="Rotation Power" value="5" high-value="10">
-            <ui:FloatField />
-        </ui:Slider>
+        <ui:Instance template="slider_float" name="slider_float" />
     </ui:Foldout>
     <ui:Foldout text="Hull">
         <ui:SliderInt picking-mode="Ignore" label="Initial Health" value="10" high-value="100" low-value="1">
