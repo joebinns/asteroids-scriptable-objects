@@ -10,10 +10,8 @@
             <ui:FloatField />
         </ui:MinMaxSlider>
     </ui:Foldout>
-    <ui:Foldout text="Engine">
-        <ui:Slider picking-mode="Ignore" label="Throttle Power" value="2" high-value="10">
-            <ui:FloatField />
-        </ui:Slider>
+    <ui:Foldout text="Engine" name="engine">
+        <ui:Slider picking-mode="Ignore" label="Throttle Power" value="2" high-value="10" binding-path="ThrottlePower" name="throttle-power" />
         <ui:Slider picking-mode="Ignore" label="Rotation Power" value="5" high-value="10">
             <ui:FloatField />
         </ui:Slider>
