@@ -19,7 +19,6 @@ public class GameSettingsWindow : EditorWindow // TODO: OnEnable, instance the s
 
     private void OnEnable()
     {
-        //_gameSettings = AssetDatabase.LoadAssetAtPath<GameSettings>("Assets/Tools/Scriptable Objects/Instances/Game Settings.asset");
         rootVisualElement.Bind(new SerializedObject(_gameSettings));
     }
 
@@ -31,5 +30,10 @@ public class GameSettingsWindow : EditorWindow // TODO: OnEnable, instance the s
         // Instantiate UXML
         VisualElement labelFromUXML = m_VisualTreeAsset.Instantiate();
         root.Add(labelFromUXML);
+    }
+
+    private void OnInspectorUpdate()
+    {
+        _gameSettings.AsteroidSpawnerSettings.Sync();
     }
 }

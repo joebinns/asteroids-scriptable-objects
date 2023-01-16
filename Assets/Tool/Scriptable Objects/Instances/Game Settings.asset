@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   AsteroidSpawnerSettings:
-    SpawnTimeRange: {x: 1.88, y: 9.77}
-    AmountRange: {x: 0, y: 0}
+    SpawnTimeRange: {x: 31.1, y: 31.1}
+    AmountRange: {x: 126, y: 126}
   HullSettings:
-    InitialHealth: 21
+    InitialHealth: 28
   EngineSettings:
     ThrottlePower: 58.3
-    RotationPower: 0
+    RotationPower: 24.7
   GunSettings:
     Cooldown: 0

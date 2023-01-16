@@ -8,7 +8,7 @@
         <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
             <ui:Label tabindex="-1" text="Amount Range" display-tooltip-when-elided="true" />
             <ui:IntegerField label="Min" value="42" binding-path="AmountRange.x"/>
-            <ui:IntegerField label="Max" value="42" binding-path="AmountRange.x"/>
+            <ui:IntegerField label="Max" value="42" binding-path="AmountRange.y"/>
         </ui:VisualElement>
     </ui:Foldout>
     <ui:Foldout text="Hull" binding-path="HullSettings">

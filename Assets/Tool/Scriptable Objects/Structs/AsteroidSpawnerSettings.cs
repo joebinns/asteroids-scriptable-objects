@@ -9,7 +9,20 @@ public struct AsteroidSpawnerSettings
 
     public AsteroidSpawnerSettings(Vector2 spawnTimeRange, Vector2Int amountRange)
     {
-        this.SpawnTimeRange = spawnTimeRange;
-        this.AmountRange = amountRange;
+        SpawnTimeRange = spawnTimeRange;
+        AmountRange = amountRange;
+    }
+
+    public void Sync()
+    {
+        if (SpawnTimeRange.x > SpawnTimeRange.y)
+        {
+            SpawnTimeRange.y = SpawnTimeRange.x;
+        }
+        
+        if (AmountRange.x > AmountRange.y)
+        {
+            AmountRange.y = AmountRange.x;
+        }
     }
 }
