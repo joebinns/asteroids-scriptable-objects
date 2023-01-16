@@ -1,5 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
-    <ui:Slider picking-mode="Ignore" label="Rotation Power" value="5" high-value="10">
-        <ui:FloatField />
-    </ui:Slider>
-</ui:UXML>

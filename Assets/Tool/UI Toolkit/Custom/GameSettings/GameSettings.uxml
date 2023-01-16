@@ -16,9 +16,7 @@
         <ui:Instance template="slider_float" name="slider_float" />
     </ui:Foldout>
     <ui:Foldout text="Hull">
-        <ui:SliderInt picking-mode="Ignore" label="Initial Health" value="10" high-value="100" low-value="1">
-            <ui:FloatField />
-        </ui:SliderInt>
+        <ui:SliderInt picking-mode="Ignore" label="Initial Health" value="10" high-value="100" low-value="1" show-input-field="true" binding-path="InitialHealth" />
     </ui:Foldout>
     <ui:Foldout text="Gun">
         <ui:Slider picking-mode="Ignore" label="Cooldown" value="0.25" high-value="1">
