@@ -1,3 +1,6 @@
+using System;
+
+[Serializable]
 public struct HullSettings
 {
     public int InitialHealth;

@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6421b4714d08f914d897b973b1b6d698, type: 3}
   m_Name: Game Settings
   m_EditorClassIdentifier: 
+  AsteroidSpawnerSettings:
+    SpawnTimeRange: {x: 1.88, y: 9.77}
+    AmountRange: {x: 0, y: 0}
+  HullSettings:
+    InitialHealth: 55
+  EngineSettings:
+    ThrottlePower: 0
+    RotationPower: 0
+  GunSettings:
+    Cooldown: 0

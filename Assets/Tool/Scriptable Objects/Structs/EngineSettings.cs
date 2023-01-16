@@ -1,3 +1,6 @@
+using System;
+
+[Serializable]
 public struct EngineSettings 
 {
     public float ThrottlePower;

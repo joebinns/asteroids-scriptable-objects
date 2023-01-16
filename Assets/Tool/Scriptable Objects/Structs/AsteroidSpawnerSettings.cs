@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 
+[Serializable]
 public struct AsteroidSpawnerSettings
 {
     public Vector2 SpawnTimeRange;
