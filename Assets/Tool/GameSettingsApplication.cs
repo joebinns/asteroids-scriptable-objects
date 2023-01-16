@@ -1,20 +1,14 @@
-using System;
 using Asteroids;
 using Ship;
 using UnityEngine;
 
-public class DebugGameSettings : MonoBehaviour
+public class GameSettingsApplication : MonoBehaviour
 {
     [SerializeField] private GameSettings _gameSettings;
     [SerializeField] private AsteroidSpawner _asteroidSpawner;
     [SerializeField] private Engine _engine;
     [SerializeField] private Hull _hull;
     [SerializeField] private Gun _gun;
-
-    private void Update()
-    {
-        Debug.Log(_gameSettings.AsteroidSpawnerSettings.SpawnTimeRange);
-    }
 
     private void Start()
     {
