@@ -1,6 +1,4 @@
-using UnityEditor.VersionControl;
 using UnityEngine;
-using Variables;
 
 namespace Ship
 {

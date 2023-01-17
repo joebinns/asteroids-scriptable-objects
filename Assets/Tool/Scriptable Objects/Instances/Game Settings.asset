@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Game Settings
   m_EditorClassIdentifier: 
   AsteroidSpawnerSettings:
-    SpawnTimeRange: {x: 8, y: 12}
-    AmountRange: {x: 8, y: 12}
+    SpawnTimeRange: {x: 8.28, y: 12}
+    AmountRange: {x: 7, y: 17}
   HullSettings:
     InitialHealth: 10
   EngineSettings:
