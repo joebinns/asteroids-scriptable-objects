@@ -245,10 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameSettings: {fileID: 11400000, guid: 7dce6398a37b39846a3732c114e2144d, type: 2}
-  _asteroidSpawner: {fileID: 1867257716}
-  _engine: {fileID: 2970632032457142647}
-  _hull: {fileID: 2970632032457142646}
-  _gun: {fileID: 2970632032457142645}
 --- !u!4 &1755423514
 Transform:
   m_ObjectHideFlags: 0
@@ -416,36 +412,3 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
---- !u!114 &2970632032457142645 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2970632033307266020, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-  m_PrefabInstance: {fileID: 2970632032457142644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cec919a16c634234caf182da12e65f96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2970632032457142646 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2970632031999273633, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-  m_PrefabInstance: {fileID: 2970632032457142644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8049130da1c3b374a8385482151b2e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2970632032457142647 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2970632031999273638, guid: ab39a3d0044af1d46b46c0ccbc24f3dd, type: 3}
-  m_PrefabInstance: {fileID: 2970632032457142644}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27ca54af3d6ff174994b183b53e8dc92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
