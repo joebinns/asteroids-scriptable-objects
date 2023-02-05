@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _asteroidPrefab: {fileID: 1784223117350305363, guid: 01106835b2bc0e347a3bb06b7544b51a, type: 3}
-  MinSpawnTime: 8.28
+  MinSpawnTime: 9.74
   MaxSpawnTime: 12
   MinAmount: 7
   MaxAmount: 17
